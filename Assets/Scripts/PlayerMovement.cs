@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             inputVector = Vector3.Lerp(inputVector, Vector3.zero, momentumDampening * Time.deltaTime);
-
+             
             isWalking = false;
         }
 
