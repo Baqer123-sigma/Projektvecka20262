@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 20f;
     private CharacterController characterController;
+    public Animator CamAnim;
+    private bool isWalking;
 
     private Vector3 inputVector;
     private Vector3 movementVector;
@@ -18,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     {
         GetInput();
         MovePlayer();
+        CheckForHeadBob();
+
+        CamAnim.SetBool("isWalking", isWalking);
     }
 
     void GetInput()
@@ -32,5 +37,17 @@ public class PlayerMovement : MonoBehaviour
     void MovePlayer()
     {
         characterController.Move(movementVector * Time.deltaTime);
+    }
+
+    void CheckForHeadBob()
+    {
+        if (characterController.velocity.magnitude > 0.1f)
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
     }
 }
