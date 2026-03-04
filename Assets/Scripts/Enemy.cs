@@ -11,11 +11,14 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDamage(float damage)
     {
-
+        enemyHealth -= damage;
     }
 }
