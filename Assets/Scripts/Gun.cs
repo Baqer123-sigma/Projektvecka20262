@@ -11,8 +11,9 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire;
     private BoxCollider gunTrigger;
 
-    public LayerMask mask;
+    public LayerMask raycastLayerMask;
     public EnemyManager enemyManager;
+    public AudioSource shootSoundEffect;
 
     void Start()
     {
@@ -31,6 +32,9 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
+        shootSoundEffect.Stop(); // Ensures no audio overlapping
+        shootSoundEffect.Play(); // Play shoot sound effect
+
         // Damage all enemies in line of sight
         foreach (var enemy in enemyManager.enemiesInTrigger)
         {
@@ -38,7 +42,7 @@ public class Gun : MonoBehaviour
             var direction = enemy.transform.position - transform.position;
 
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, direction, out hit, range + 1.5f, mask))
+            if (Physics.Raycast(transform.position, direction, out hit, range + 1.5f, raycastLayerMask))
             {
                 if (hit.transform == enemy.transform)
                 {
