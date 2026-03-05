@@ -11,7 +11,7 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire;
     private BoxCollider gunTrigger;
 
-    public LayerMask mask;
+    public LayerMask raycastLayerMask;
     public EnemyManager enemyManager;
     public AudioSource shootSoundEffect;
 
@@ -42,7 +42,7 @@ public class Gun : MonoBehaviour
             var direction = enemy.transform.position - transform.position;
 
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, direction, out hit, range + 1.5f, mask))
+            if (Physics.Raycast(transform.position, direction, out hit, range + 1.5f, raycastLayerMask))
             {
                 if (hit.transform == enemy.transform)
                 {
