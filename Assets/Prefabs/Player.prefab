@@ -405,3 +405,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 20
   verticalRange: 20
+  fireRate: 1
+  damage: 2
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  enemyManager: {fileID: 7828929677268615849, guid: 5e6e5f4e16517e14aa27e189c11d3ce9, type: 3}
