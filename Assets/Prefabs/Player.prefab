@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4468429026658232334}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,9 +408,9 @@ MonoBehaviour:
   verticalRange: 20
   fireRate: 1
   damage: 2
-  mask:
+  raycastLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 512
   enemyManager: {fileID: 7828929677268615849, guid: 5e6e5f4e16517e14aa27e189c11d3ce9, type: 3}
   shootSoundEffect: {fileID: 8041526408047755927}
 --- !u!82 &8041526408047755927
