@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
 
     public LayerMask mask;
     public EnemyManager enemyManager;
+    public AudioSource shootSoundEffect;
 
     void Start()
     {
@@ -31,6 +32,9 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
+        shootSoundEffect.Stop(); // Ensures no audio overlapping
+        shootSoundEffect.Play(); // Play shoot sound effect
+
         // Damage all enemies in line of sight
         foreach (var enemy in enemyManager.enemiesInTrigger)
         {

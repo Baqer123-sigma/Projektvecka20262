@@ -152,3 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 7828929677268615849, guid: 5e6e5f4e16517e14aa27e189c11d3ce9, type: 3}
+  gunHitEffect: {fileID: 3752882371903139779, guid: b64eaf1ba612bac4481c184eb686afa3, type: 3}
