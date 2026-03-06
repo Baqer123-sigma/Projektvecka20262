@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 319836160535358002}
   - component: {fileID: 2271050893136699611}
   - component: {fileID: 4468429026658232334}
-  m_Layer: 0
+  - component: {fileID: 1763701972313585854}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2891362696482416807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91,6 +92,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 1.5
   smoothing: 1.5
+--- !u!114 &1763701972313585854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891362696482416807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154a070d9926c1d4da81663aefd89bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5284192065762709635
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +362,7 @@ GameObject:
   - component: {fileID: 3275516338217767786}
   - component: {fileID: 4420694729043234895}
   - component: {fileID: 8041526408047755927}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +424,7 @@ MonoBehaviour:
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  enemyManager: {fileID: 7828929677268615849, guid: 5e6e5f4e16517e14aa27e189c11d3ce9, type: 3}
+  enemyManager: {fileID: 0}
   shootSoundEffect: {fileID: 8041526408047755927}
 --- !u!82 &8041526408047755927
 AudioSource:
