@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Instantiate(gunHitEffect, transform.position, Quaternion.identity);
+        // Destroy(gunHitEffect, 2);
         enemyHealth -= damage;
     }
 }
