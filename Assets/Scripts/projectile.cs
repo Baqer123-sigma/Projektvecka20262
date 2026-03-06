@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
+    //Alex B.T
     private void Awake()
     {
         Destroy(gameObject, 5); // Destroys projectile after X seconds to prevent lag
