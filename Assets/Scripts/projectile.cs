@@ -4,7 +4,7 @@ public class projectile : MonoBehaviour
 {
     private void Awake()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 5); // Destroys projectile after X seconds to prevent lag
     }
 
     private void OnCollisionEnter(Collision collision)
