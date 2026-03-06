@@ -7,7 +7,7 @@ public class Playerhealth : MonoBehaviour
     Gun gun;
     PlayerMovement movement;
     MouseLook look;
-    int health = 100;
+    int health = 300;
 
     private void Start()
     {
