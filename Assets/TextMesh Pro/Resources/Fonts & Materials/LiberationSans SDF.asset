@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - OUTLINE_ON
   m_InvalidKeywords: []
+  m_ShaderKeywords: 
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -2425,8 +2426,6 @@ MonoBehaviour:
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
   - m_Index: 156
-    m_Metrics:
-      m_Width: 50
       m_Height: 75
       m_HorizontalBearingX: 6
       m_HorizontalBearingY: 74
