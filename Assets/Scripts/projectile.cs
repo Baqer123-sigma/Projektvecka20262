@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
+    private void Awake()
+    {
+        Destroy(gameObject, 5);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
