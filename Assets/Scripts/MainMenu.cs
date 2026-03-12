@@ -10,11 +10,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Play");
     }
 
-    public void Options()
-    {
-        Debug.Log("Options");
-    }
-
     public void Quit()
     {
         Application.Quit();
